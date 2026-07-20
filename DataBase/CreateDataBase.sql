@@ -1,0 +1,2 @@
+CREATE DATABASE Reservations;
+GO
