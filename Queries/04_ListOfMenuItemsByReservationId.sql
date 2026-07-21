@@ -1,4 +1,4 @@
-DECLARE @reservation_id INT =5;
+DECLARE @reservation_id INT =18;
 
 SELECT Reservations.ReservationId,
        MenuItems.*
