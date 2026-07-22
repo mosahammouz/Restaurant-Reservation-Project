@@ -173,3 +173,16 @@ REFERENCES MenuItems(ItemId)
 );
 END;
 GO
+
+IF NOT EXISTS( SELECT 1 FROM sys.tables WHERE name = 'AuditLog')
+BEGIN
+    CREATE TABLE AuditLog
+    (
+        AuditId INT IDENTITY PRIMARY KEY,
+        RestaurantId INT,
+        TableId INT,
+        ReservationDate DATE,
+        ChangeDate DATETIME DEFAULT GETDATE()
+    );
+end;
+GO
